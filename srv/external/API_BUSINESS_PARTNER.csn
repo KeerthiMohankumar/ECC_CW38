@@ -1,0 +1,3256 @@
+{
+  "meta": {
+    "creator": "cds-dk 6.1.5"
+  },
+  "$version": "2.0",
+  "definitions": {
+    "API_BUSINESS_PARTNER": {
+      "kind": "service",
+      "@cds.external": true,
+      "@m.IsDefaultEntityContainer": "true",
+      "@sap.supported.formats": "atom json xlsx"
+    },
+    "API_BUSINESS_PARTNER.A_AddressEmailAddress": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "@sap.label": "Address Email Address",
+      "elements": {
+        "AddressID": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Address Number"
+        },
+        "Person": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Person number"
+        },
+        "OrdinalNumber": {
+          "key": true,
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Sequence Number"
+        },
+        "IsDefaultEmailAddress": {
+          "type": "cds.Boolean",
+          "@sap.label": "Standard addr."
+        },
+        "EmailAddress": {
+          "type": "cds.String",
+          "length": 241,
+          "@sap.label": "E-Mail Address"
+        },
+        "SearchEmailAddress": {
+          "type": "cds.String",
+          "length": 20,
+          "@sap.label": "E-Mail Address"
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_AddressFaxNumber": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "@sap.label": "Address Fax Number",
+      "elements": {
+        "AddressID": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Address Number"
+        },
+        "Person": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Person number"
+        },
+        "OrdinalNumber": {
+          "key": true,
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Sequence Number"
+        },
+        "IsDefaultFaxNumber": {
+          "type": "cds.Boolean",
+          "@sap.label": "Standard No."
+        },
+        "FaxCountry": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Country"
+        },
+        "FaxNumber": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.label": "Fax"
+        },
+        "FaxNumberExtension": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Extension"
+        },
+        "InternationalFaxNumber": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.label": "Fax number"
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_AddressHomePageURL": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "@sap.label": "Address Home Page URL",
+      "elements": {
+        "AddressID": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Address Number"
+        },
+        "Person": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Person number"
+        },
+        "OrdinalNumber": {
+          "key": true,
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Sequence Number"
+        },
+        "ValidityStartDate": {
+          "key": true,
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "from"
+        },
+        "IsDefaultURLAddress": {
+          "key": true,
+          "type": "cds.Boolean",
+          "@sap.label": "Standard addr."
+        },
+        "SearchURLAddress": {
+          "type": "cds.String",
+          "length": 50,
+          "@sap.label": "URI address"
+        },
+        "URLFieldLength": {
+          "type": "cds.Integer",
+          "@sap.label": "URI length"
+        },
+        "WebsiteURL": {
+          "type": "cds.String",
+          "length": 2048,
+          "@sap.label": "URI"
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_AddressPhoneNumber": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "@sap.label": "Address Phone Number",
+      "elements": {
+        "AddressID": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Address Number"
+        },
+        "Person": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Person number"
+        },
+        "OrdinalNumber": {
+          "key": true,
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Sequence Number"
+        },
+        "DestinationLocationCountry": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Country"
+        },
+        "IsDefaultPhoneNumber": {
+          "type": "cds.Boolean",
+          "@sap.label": "Standard No."
+        },
+        "PhoneNumber": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.label": "Telephone"
+        },
+        "PhoneNumberExtension": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Extension"
+        },
+        "InternationalPhoneNumber": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.label": "Telephone number"
+        },
+        "PhoneNumberType": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.label": "Mobile phone"
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_BPContactToAddress": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.creatable": "false",
+      "@sap.updatable": "false",
+      "@sap.deletable": "false",
+      "@sap.content.version": "1",
+      "@sap.label": "Business Partner Contact Address",
+      "elements": {
+        "RelationshipNumber": {
+          "key": true,
+          "type": "cds.String",
+          "length": 12,
+          "@sap.label": "BP Relationship No."
+        },
+        "BusinessPartnerCompany": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Business Partner"
+        },
+        "BusinessPartnerPerson": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Business Partner"
+        },
+        "ValidityEndDate": {
+          "key": true,
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Valid To"
+        },
+        "AddressID": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Address Number"
+        },
+        "AddressNumber": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Address Number"
+        },
+        "AdditionalStreetPrefixName": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "Street 3"
+        },
+        "AdditionalStreetSuffixName": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "Street 5"
+        },
+        "AddressTimeZone": {
+          "type": "cds.String",
+          "length": 6,
+          "@sap.label": "Time zone"
+        },
+        "CareOfName": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "c/o"
+        },
+        "CityCode": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.label": "City Code"
+        },
+        "CityName": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "City"
+        },
+        "CompanyPostalCode": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Company Postal Code"
+        },
+        "Country": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Country Key"
+        },
+        "County": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "County"
+        },
+        "DeliveryServiceNumber": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Delivery Service No."
+        },
+        "DeliveryServiceTypeCode": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Delvry Serv Type"
+        },
+        "District": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "District"
+        },
+        "FormOfAddress": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Title",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "FullName": {
+          "type": "cds.String",
+          "length": 80,
+          "@sap.label": "Full Name",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "HomeCityName": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "Different City"
+        },
+        "HouseNumber": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "House Number"
+        },
+        "HouseNumberSupplementText": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Supplement"
+        },
+        "Language": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Language Key"
+        },
+        "POBox": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "PO Box"
+        },
+        "POBoxDeviatingCityName": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "PO Box City"
+        },
+        "POBoxDeviatingCountry": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "PO box country"
+        },
+        "POBoxDeviatingRegion": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "PO Box Region"
+        },
+        "POBoxIsWithoutNumber": {
+          "type": "cds.Boolean",
+          "@sap.label": "PO Box w/o No."
+        },
+        "POBoxLobbyName": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "PO Box Lobby"
+        },
+        "POBoxPostalCode": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "PO Box Postal Code"
+        },
+        "Person": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Person number",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "PostalCode": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Postal Code"
+        },
+        "PrfrdCommMediumType": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Comm. Method"
+        },
+        "Region": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Region"
+        },
+        "StreetName": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.label": "Street"
+        },
+        "StreetPrefixName": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "Street 2"
+        },
+        "StreetSuffixName": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "Street 4"
+        },
+        "TaxJurisdiction": {
+          "type": "cds.String",
+          "length": 15,
+          "@sap.label": "Tax Jurisdiction"
+        },
+        "TransportZone": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Transportation Zone"
+        },
+        "to_EmailAddress": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_AddressEmailAddress",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "to_FaxNumber": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_AddressFaxNumber",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "to_MobilePhoneNumber": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_AddressPhoneNumber",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "to_PhoneNumber": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_AddressPhoneNumber",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "to_URLAddress": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_AddressHomePageURL",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_BPContactToFuncAndDept": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.creatable": "false",
+      "@sap.deletable": "false",
+      "@sap.content.version": "1",
+      "@sap.label": "Business Partner Contact Function and Department",
+      "elements": {
+        "RelationshipNumber": {
+          "key": true,
+          "type": "cds.String",
+          "length": 12,
+          "@sap.label": "BP Relationship No."
+        },
+        "BusinessPartnerCompany": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Business Partner"
+        },
+        "BusinessPartnerPerson": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Business Partner"
+        },
+        "ValidityEndDate": {
+          "key": true,
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Valid To"
+        },
+        "ContactPersonFunction": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Function"
+        },
+        "ContactPersonDepartment": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Department"
+        },
+        "PhoneNumber": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.label": "Telephone"
+        },
+        "PhoneNumberExtension": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Extension"
+        },
+        "FaxNumber": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.label": "Fax"
+        },
+        "FaxNumberExtension": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Extension"
+        },
+        "EmailAddress": {
+          "type": "cds.String",
+          "length": 241,
+          "@sap.label": "E-Mail Address"
+        },
+        "RelationshipCategory": {
+          "type": "cds.String",
+          "length": 6,
+          "@sap.label": "Relationship Cat."
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_BuPaAddressUsage": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "@sap.label": "Business Partner Address Usage",
+      "elements": {
+        "BusinessPartner": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Business Partner"
+        },
+        "ValidityEndDate": {
+          "key": true,
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTimeOffset",
+          "@odata.Precision": 0,
+          "@sap.label": "Valid To"
+        },
+        "AddressUsage": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Address Type"
+        },
+        "AddressID": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Address Number"
+        },
+        "ValidityStartDate": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTimeOffset",
+          "@odata.Precision": 0,
+          "@sap.label": "Valid From"
+        },
+        "StandardUsage": {
+          "type": "cds.Boolean",
+          "@sap.label": "Standard Usage"
+        },
+        "AuthorizationGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Authorization Group"
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_BuPaIdentification": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "@sap.label": "Business Partner Identification",
+      "elements": {
+        "BusinessPartner": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Business Partner"
+        },
+        "BPIdentificationType": {
+          "key": true,
+          "type": "cds.String",
+          "length": 6,
+          "@sap.label": "Identification Type"
+        },
+        "BPIdentificationNumber": {
+          "key": true,
+          "type": "cds.String",
+          "length": 60,
+          "@sap.label": "ID number"
+        },
+        "BPIdnNmbrIssuingInstitute": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "Responsible Institn"
+        },
+        "BPIdentificationEntryDate": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Entry date"
+        },
+        "Country": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Country"
+        },
+        "Region": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Region"
+        },
+        "ValidityStartDate": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Valid from"
+        },
+        "ValidityEndDate": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Valid To"
+        },
+        "AuthorizationGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Authorization Group"
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_BuPaIndustry": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "@sap.label": "Business Partner Industry",
+      "elements": {
+        "IndustrySector": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Industry"
+        },
+        "IndustrySystemType": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Industry System"
+        },
+        "BusinessPartner": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Business Partner"
+        },
+        "IsStandardIndustry": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.label": "Standard Industry"
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_BusinessPartner": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.deletable": "false",
+      "@sap.content.version": "1",
+      "@sap.label": "Business Partner",
+      "elements": {
+        "BusinessPartner": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Business Partner"
+        },
+        "Customer": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Customer",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Supplier": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Vendor",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "AcademicTitle": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Academic Title 1"
+        },
+        "AuthorizationGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Authorization Group"
+        },
+        "BusinessPartnerCategory": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.label": "BP Category"
+        },
+        "BusinessPartnerFullName": {
+          "type": "cds.String",
+          "length": 81,
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "BusinessPartnerGrouping": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Grouping"
+        },
+        "BusinessPartnerName": {
+          "type": "cds.String",
+          "length": 81,
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "BusinessPartnerUUID": {
+          "type": "cds.UUID",
+          "@sap.label": "BP GUID",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "CorrespondenceLanguage": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Correspondence lang."
+        },
+        "CreatedByUser": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.label": "Created by",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "CreationDate": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Created on",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "CreationTime": {
+          "type": "cds.Time",
+          "@sap.label": "Created at",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "FirstName": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "First name"
+        },
+        "FormOfAddress": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Title"
+        },
+        "Industry": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Industry sector"
+        },
+        "InternationalLocationNumber1": {
+          "type": "cds.String",
+          "length": 7,
+          "@sap.label": "Int. location no. 1"
+        },
+        "InternationalLocationNumber2": {
+          "type": "cds.String",
+          "length": 5,
+          "@sap.label": "Int. location no. 2"
+        },
+        "IsFemale": {
+          "type": "cds.Boolean",
+          "@sap.label": "Female"
+        },
+        "IsMale": {
+          "type": "cds.Boolean",
+          "@sap.label": "Male"
+        },
+        "IsNaturalPerson": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.label": "Natural Person"
+        },
+        "IsSexUnknown": {
+          "type": "cds.Boolean",
+          "@sap.label": "Unknown"
+        },
+        "Language": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Language"
+        },
+        "LastChangeDate": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Changed on",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "LastChangeTime": {
+          "type": "cds.Time",
+          "@sap.label": "Changed at",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "LastChangedByUser": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.label": "Changed by",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "LastName": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "Last name"
+        },
+        "LegalForm": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Legal form"
+        },
+        "OrganizationBPName1": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "Name 1"
+        },
+        "OrganizationBPName2": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "Name 2"
+        },
+        "OrganizationBPName3": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "Name 3"
+        },
+        "OrganizationBPName4": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "Name 4"
+        },
+        "OrganizationFoundationDate": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Date founded"
+        },
+        "OrganizationLiquidationDate": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Liquidation date"
+        },
+        "SearchTerm1": {
+          "type": "cds.String",
+          "length": 20,
+          "@sap.label": "Search term 1"
+        },
+        "AdditionalLastName": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "Other Last Name"
+        },
+        "BirthDate": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Date of Birth"
+        },
+        "BusinessPartnerIsBlocked": {
+          "type": "cds.Boolean",
+          "@sap.label": "Central Block"
+        },
+        "BusinessPartnerType": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "BP Type"
+        },
+        "ETag": {
+          "type": "cds.String",
+          "length": 26,
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "GroupBusinessPartnerName1": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "Name 1"
+        },
+        "GroupBusinessPartnerName2": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "Name 2"
+        },
+        "IndependentAddressID": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Address Number",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "InternationalLocationNumber3": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.label": "Check digit"
+        },
+        "MiddleName": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "Middle Name"
+        },
+        "NameCountry": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Country for format"
+        },
+        "NameFormat": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Name Format"
+        },
+        "PersonFullName": {
+          "type": "cds.String",
+          "length": 80,
+          "@sap.label": "Full Name"
+        },
+        "PersonNumber": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Person number",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "IsMarkedForArchiving": {
+          "type": "cds.Boolean",
+          "@sap.label": "Archiving Flag"
+        },
+        "BusinessPartnerIDByExtSystem": {
+          "type": "cds.String",
+          "length": 20,
+          "@sap.label": "External BP Number"
+        },
+        "TradingPartner": {
+          "type": "cds.String",
+          "length": 6,
+          "@sap.label": "Trading Partner No."
+        },
+        "to_Supplier": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_Supplier",
+          "keys": []
+        },
+        "to_Customer": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_Customer",
+          "keys": []
+        },
+        "to_BusinessPartnerTax": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_BusinessPartnerTaxNumber",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "to_BusinessPartnerRole": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_BusinessPartnerRole",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "to_BusinessPartnerContact": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_BusinessPartnerContact",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "to_BusinessPartnerBank": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_BusinessPartnerBank",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "to_BusinessPartnerAddress": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_BusinessPartnerAddress",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "to_BuPaIndustry": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_BuPaIndustry",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "to_BuPaIdentification": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_BuPaIdentification",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_BusinessPartnerAddress": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "@sap.label": "Business Partner Address",
+      "elements": {
+        "BusinessPartner": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Business Partner"
+        },
+        "AddressID": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Address Number"
+        },
+        "ValidityStartDate": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTimeOffset",
+          "@odata.Precision": 0,
+          "@sap.label": "Valid From"
+        },
+        "ValidityEndDate": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTimeOffset",
+          "@odata.Precision": 0,
+          "@sap.label": "Valid To"
+        },
+        "AuthorizationGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Authorization Group"
+        },
+        "AddressUUID": {
+          "type": "cds.UUID",
+          "@sap.label": "UUID",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "AdditionalStreetPrefixName": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "Street 3"
+        },
+        "AdditionalStreetSuffixName": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "Street 5"
+        },
+        "AddressTimeZone": {
+          "type": "cds.String",
+          "length": 6,
+          "@sap.label": "Time zone"
+        },
+        "CareOfName": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "c/o"
+        },
+        "CityCode": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.label": "City Code"
+        },
+        "CityName": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "City"
+        },
+        "CompanyPostalCode": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Company Postal Code"
+        },
+        "Country": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Country Key"
+        },
+        "County": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "County"
+        },
+        "DeliveryServiceNumber": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Delivery Service No."
+        },
+        "DeliveryServiceTypeCode": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Delvry Serv Type"
+        },
+        "District": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "District"
+        },
+        "FormOfAddress": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Title",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "FullName": {
+          "type": "cds.String",
+          "length": 80,
+          "@sap.label": "Full Name",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "HomeCityName": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "Different City"
+        },
+        "HouseNumber": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "House Number"
+        },
+        "HouseNumberSupplementText": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Supplement"
+        },
+        "Language": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Language Key"
+        },
+        "POBox": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "PO Box"
+        },
+        "POBoxDeviatingCityName": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "PO Box City"
+        },
+        "POBoxDeviatingCountry": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "PO box country"
+        },
+        "POBoxDeviatingRegion": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "PO Box Region"
+        },
+        "POBoxIsWithoutNumber": {
+          "type": "cds.Boolean",
+          "@sap.label": "PO Box w/o No."
+        },
+        "POBoxLobbyName": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "PO Box Lobby"
+        },
+        "POBoxPostalCode": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "PO Box Postal Code"
+        },
+        "Person": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Person number",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "PostalCode": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Postal Code"
+        },
+        "PrfrdCommMediumType": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Comm. Method"
+        },
+        "Region": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Region"
+        },
+        "StreetName": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.label": "Street"
+        },
+        "StreetPrefixName": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "Street 2"
+        },
+        "StreetSuffixName": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "Street 4"
+        },
+        "TaxJurisdiction": {
+          "type": "cds.String",
+          "length": 15,
+          "@sap.label": "Tax Jurisdiction"
+        },
+        "TransportZone": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Transportation Zone"
+        },
+        "AddressIDByExternalSystem": {
+          "type": "cds.String",
+          "length": 20,
+          "@sap.label": "External Address No."
+        },
+        "to_AddressUsage": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_BuPaAddressUsage",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "to_EmailAddress": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_AddressEmailAddress",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "to_FaxNumber": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_AddressFaxNumber",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "to_MobilePhoneNumber": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_AddressPhoneNumber",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "to_PhoneNumber": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_AddressPhoneNumber",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "to_URLAddress": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_AddressHomePageURL",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_BusinessPartnerBank": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "@sap.label": "Business Partner Bank",
+      "elements": {
+        "BusinessPartner": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Business Partner"
+        },
+        "BankIdentification": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Bank details ID"
+        },
+        "BankCountryKey": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Bank Country"
+        },
+        "BankName": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.label": "Bank name",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "BankNumber": {
+          "type": "cds.String",
+          "length": 15,
+          "@sap.label": "Bank Key"
+        },
+        "SWIFTCode": {
+          "type": "cds.String",
+          "length": 11,
+          "@sap.label": "SWIFT/BIC",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "BankControlKey": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Bank Control Key"
+        },
+        "BankAccountHolderName": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.label": "Account Holder"
+        },
+        "BankAccountName": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.label": "Account Name"
+        },
+        "ValidityStartDate": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTimeOffset",
+          "@odata.Precision": 0,
+          "@sap.label": "Valid From"
+        },
+        "ValidityEndDate": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTimeOffset",
+          "@odata.Precision": 0,
+          "@sap.label": "Valid To"
+        },
+        "IBAN": {
+          "type": "cds.String",
+          "length": 34,
+          "@sap.label": "IBAN"
+        },
+        "IBANValidityStartDate": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "IBAN valid from"
+        },
+        "BankAccount": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.label": "Bank acct"
+        },
+        "BankAccountReferenceText": {
+          "type": "cds.String",
+          "length": 20,
+          "@sap.label": "Reference Details"
+        },
+        "CollectionAuthInd": {
+          "type": "cds.Boolean",
+          "@sap.label": "Collect.author."
+        },
+        "CityName": {
+          "type": "cds.String",
+          "length": 35,
+          "@sap.label": "City",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "AuthorizationGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Authorization Group"
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_BusinessPartnerContact": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "@sap.label": "Business Partner Contact",
+      "elements": {
+        "RelationshipNumber": {
+          "key": true,
+          "type": "cds.String",
+          "length": 12,
+          "@sap.label": "BP Relationship No."
+        },
+        "BusinessPartnerCompany": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Business Partner"
+        },
+        "BusinessPartnerPerson": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Business Partner"
+        },
+        "ValidityEndDate": {
+          "key": true,
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Valid To"
+        },
+        "ValidityStartDate": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Valid From"
+        },
+        "IsStandardRelationship": {
+          "type": "cds.Boolean",
+          "@sap.label": "Standard"
+        },
+        "RelationshipCategory": {
+          "type": "cds.String",
+          "length": 6,
+          "@sap.label": "Relationship Cat."
+        },
+        "to_ContactAddress": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_BPContactToAddress",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "to_ContactRelationship": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_BPContactToFuncAndDept",
+          "keys": []
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_BusinessPartnerRole": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.deletable": "false",
+      "@sap.content.version": "1",
+      "@sap.label": "Business Partner Role",
+      "elements": {
+        "BusinessPartner": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Business Partner"
+        },
+        "BusinessPartnerRole": {
+          "key": true,
+          "type": "cds.String",
+          "length": 6,
+          "@sap.label": "BP Role"
+        },
+        "ValidFrom": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTimeOffset",
+          "@odata.Precision": 0,
+          "@sap.label": "Valid From"
+        },
+        "ValidTo": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTimeOffset",
+          "@odata.Precision": 0,
+          "@sap.label": "Valid To"
+        },
+        "AuthorizationGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Authorization Group"
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_BusinessPartnerTaxNumber": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "@sap.label": "Business Partner Tax Number",
+      "elements": {
+        "BusinessPartner": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Business Partner"
+        },
+        "BPTaxType": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Tax Number Category"
+        },
+        "BPTaxNumber": {
+          "type": "cds.String",
+          "length": 20,
+          "@sap.label": "Tax number"
+        },
+        "BPTaxLongNumber": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.label": "Tax Number"
+        },
+        "AuthorizationGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Authorization Group"
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_Customer": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.creatable": "false",
+      "@sap.deletable": "false",
+      "@sap.content.version": "1",
+      "@sap.label": "Customer",
+      "elements": {
+        "Customer": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Customer"
+        },
+        "AuthorizationGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Authorization"
+        },
+        "BillingIsBlockedForCustomer": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Billing block"
+        },
+        "CreatedByUser": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.label": "Created by",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "CreationDate": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Created on",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "CustomerAccountGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Account group"
+        },
+        "CustomerClassification": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Customer classific."
+        },
+        "CustomerFullName": {
+          "type": "cds.String",
+          "length": 220,
+          "@sap.label": "Customer Name",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "CustomerName": {
+          "type": "cds.String",
+          "length": 80,
+          "@sap.label": "Name of Customer",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "DeliveryIsBlocked": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Delivery block"
+        },
+        "NFPartnerIsNaturalPerson": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.label": "Natural Person"
+        },
+        "OrderIsBlockedForCustomer": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Order block"
+        },
+        "PostingIsBlocked": {
+          "type": "cds.Boolean",
+          "@sap.label": "Posting Block"
+        },
+        "Supplier": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Vendor"
+        },
+        "CustomerCorporateGroup": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Group key"
+        },
+        "FiscalAddress": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Fiscal address"
+        },
+        "Industry": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Industry",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "IndustryCode1": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Industry code 1",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "IndustryCode2": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Industry code 2",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "IndustryCode3": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Industry code 3",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "IndustryCode4": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Industry code 4",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "IndustryCode5": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Industry code 5",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "InternationalLocationNumber1": {
+          "type": "cds.String",
+          "length": 7,
+          "@sap.label": "Int. location no. 1"
+        },
+        "NielsenRegion": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Nielsen indicator"
+        },
+        "ResponsibleType": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Tax type"
+        },
+        "TaxNumber1": {
+          "type": "cds.String",
+          "length": 16,
+          "@sap.label": "Tax Number 1",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "TaxNumber2": {
+          "type": "cds.String",
+          "length": 11,
+          "@sap.label": "Tax Number 2",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "TaxNumber3": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.label": "Tax Number 3",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "TaxNumber4": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.label": "Tax Number 4",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "TaxNumber5": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.label": "Tax Number 5",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "TaxNumberType": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Tax number type"
+        },
+        "VATRegistration": {
+          "type": "cds.String",
+          "length": 20,
+          "@sap.label": "VAT Registration No."
+        },
+        "DeletionIndicator": {
+          "type": "cds.Boolean",
+          "@sap.label": "Deletion flag"
+        },
+        "to_CustomerCompany": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_CustomerCompany",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "to_CustomerSalesArea": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_CustomerSalesArea",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_CustomerCompany": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.deletable": "false",
+      "@sap.content.version": "1",
+      "@sap.label": "Customer Company",
+      "elements": {
+        "Customer": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Customer"
+        },
+        "CompanyCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Company Code"
+        },
+        "APARToleranceGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Tolerance Group"
+        },
+        "AccountByCustomer": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.label": "Account at customer"
+        },
+        "AccountingClerk": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Clerk Abbrev."
+        },
+        "AccountingClerkFaxNumber": {
+          "type": "cds.String",
+          "length": 31,
+          "@sap.label": "Acctg clerk's fax"
+        },
+        "AccountingClerkInternetAddress": {
+          "type": "cds.String",
+          "length": 130,
+          "@sap.label": "Clrk's internet add."
+        },
+        "AccountingClerkPhoneNumber": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.label": "Acct.clerks tel.no."
+        },
+        "AlternativePayerAccount": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Alternative payer"
+        },
+        "AuthorizationGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Authorization"
+        },
+        "CollectiveInvoiceVariant": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.label": "Coll.Invoice Variant"
+        },
+        "CustomerAccountNote": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.label": "Account Memo"
+        },
+        "CustomerHeadOffice": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Head office"
+        },
+        "CustomerSupplierClearingIsUsed": {
+          "type": "cds.Boolean",
+          "@sap.label": "Clearing with vendor"
+        },
+        "HouseBank": {
+          "type": "cds.String",
+          "length": 5,
+          "@sap.label": "House bank"
+        },
+        "InterestCalculationCode": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Interest indicator"
+        },
+        "InterestCalculationDate": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Last Key Date"
+        },
+        "IntrstCalcFrequencyInMonths": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Int.Calc.Freq."
+        },
+        "IsToBeLocallyProcessed": {
+          "type": "cds.Boolean",
+          "@sap.label": "Local Processing"
+        },
+        "ItemIsToBePaidSeparately": {
+          "type": "cds.Boolean",
+          "@sap.label": "Individual Payment"
+        },
+        "LayoutSortingRule": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Sort key"
+        },
+        "PaymentBlockingReason": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.label": "Payment Block"
+        },
+        "PaymentMethodsList": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Payment Methods"
+        },
+        "PaymentTerms": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Payment terms"
+        },
+        "PaytAdviceIsSentbyEDI": {
+          "type": "cds.Boolean",
+          "@sap.label": "Pmnt advice by EDI"
+        },
+        "PhysicalInventoryBlockInd": {
+          "type": "cds.Boolean",
+          "@sap.label": "Co.code post.block"
+        },
+        "ReconciliationAccount": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Reconciliation acct"
+        },
+        "RecordPaymentHistoryIndicator": {
+          "type": "cds.Boolean",
+          "@sap.label": "Record pmnt history"
+        },
+        "UserAtCustomer": {
+          "type": "cds.String",
+          "length": 15,
+          "@sap.label": "User at customer"
+        },
+        "DeletionIndicator": {
+          "type": "cds.Boolean",
+          "@sap.label": "Co.cde deletion flag"
+        },
+        "CustomerAccountGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Account group"
+        },
+        "to_CustomerDunning": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_CustomerDunning",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "to_WithHoldingTax": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_CustomerWithHoldingTax",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_CustomerDunning": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "@sap.label": "Customer Company Dunning",
+      "elements": {
+        "Customer": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Customer"
+        },
+        "CompanyCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Company Code"
+        },
+        "DunningArea": {
+          "key": true,
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Dunning Area"
+        },
+        "DunningBlock": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.label": "Dunning Block"
+        },
+        "DunningLevel": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.label": "Dunning Level"
+        },
+        "DunningProcedure": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Dunning Procedure"
+        },
+        "DunningRecipient": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Dunning Recipient"
+        },
+        "LastDunnedOn": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Last Dunned"
+        },
+        "LegDunningProcedureOn": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Legal Dunn.Proc.From"
+        },
+        "DunningClerk": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Dunning Clerk"
+        },
+        "AuthorizationGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Authorization"
+        },
+        "CustomerAccountGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Account group"
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_CustomerSalesArea": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.deletable": "false",
+      "@sap.content.version": "1",
+      "@sap.label": "Customer Sales Area",
+      "elements": {
+        "Customer": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Customer"
+        },
+        "SalesOrganization": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Sales Organization"
+        },
+        "DistributionChannel": {
+          "key": true,
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Distribution Channel"
+        },
+        "Division": {
+          "key": true,
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Division"
+        },
+        "AccountByCustomer": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.label": "Account at customer"
+        },
+        "AuthorizationGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Authorization Group"
+        },
+        "BillingIsBlockedForCustomer": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "BBlock for SlsA"
+        },
+        "CompleteDeliveryIsDefined": {
+          "type": "cds.Boolean",
+          "@sap.label": "Complete Delivery"
+        },
+        "Currency": {
+          "type": "cds.String",
+          "length": 5,
+          "@sap.label": "Currency",
+          "@sap.semantics": "currency-code"
+        },
+        "CustomerABCClassification": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "ABC classification"
+        },
+        "CustomerAccountAssignmentGroup": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Acct Assmt Grp Cust."
+        },
+        "CustomerGroup": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Customer Group"
+        },
+        "CustomerPaymentTerms": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Payment terms"
+        },
+        "CustomerPriceGroup": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Customer Price Group"
+        },
+        "CustomerPricingProcedure": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Cust.Pric.Procedure"
+        },
+        "DeliveryIsBlockedForCustomer": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "DelBlckSalesAr."
+        },
+        "DeliveryPriority": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Delivery Priority"
+        },
+        "IncotermsClassification": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Incoterms"
+        },
+        "IncotermsLocation2": {
+          "type": "cds.String",
+          "length": 70,
+          "@sap.label": "Incoterms Location 2"
+        },
+        "IncotermsVersion": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Incoterms Version"
+        },
+        "IncotermsLocation1": {
+          "type": "cds.String",
+          "length": 70,
+          "@sap.label": "Incoterms Location 1"
+        },
+        "DeletionIndicator": {
+          "type": "cds.Boolean",
+          "@sap.label": "Del.ID SlsArea"
+        },
+        "IncotermsTransferLocation": {
+          "type": "cds.String",
+          "length": 28,
+          "@sap.label": "Incoterms (Part 2)"
+        },
+        "InvoiceDate": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Invoicing Dates"
+        },
+        "ItemOrderProbabilityInPercent": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Order Probability"
+        },
+        "OrderCombinationIsAllowed": {
+          "type": "cds.Boolean",
+          "@sap.label": "Order Combination"
+        },
+        "OrderIsBlockedForCustomer": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Ord.blk:sls ar."
+        },
+        "PartialDeliveryIsAllowed": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.label": "Part.dlv./item"
+        },
+        "PriceListType": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Price List Type"
+        },
+        "SalesGroup": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Sales group"
+        },
+        "SalesOffice": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Sales office"
+        },
+        "ShippingCondition": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Shipping Conditions"
+        },
+        "SupplyingPlant": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Delivering Plant"
+        },
+        "SalesDistrict": {
+          "type": "cds.String",
+          "length": 6,
+          "@sap.label": "Sales District"
+        },
+        "CustomerAccountGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Account group"
+        },
+        "to_PartnerFunction": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_CustSalesPartnerFunc",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "to_SalesAreaTax": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_CustomerSalesAreaTax",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_CustomerSalesAreaTax": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.deletable": "false",
+      "@sap.content.version": "1",
+      "@sap.label": "Customer Sales Area Tax",
+      "elements": {
+        "Customer": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Customer"
+        },
+        "SalesOrganization": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Sales Organization"
+        },
+        "DistributionChannel": {
+          "key": true,
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "RefDistCh-Cust/Mat."
+        },
+        "Division": {
+          "key": true,
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Division"
+        },
+        "DepartureCountry": {
+          "key": true,
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Country"
+        },
+        "CustomerTaxCategory": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Tax Category"
+        },
+        "CustomerTaxClassification": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.label": "Tax Classification"
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_CustomerWithHoldingTax": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "@sap.label": "Customer WithHolding Tax",
+      "elements": {
+        "Customer": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Customer"
+        },
+        "CompanyCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Company Code"
+        },
+        "WithholdingTaxType": {
+          "key": true,
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Withholding Tax Type"
+        },
+        "WithholdingTaxCode": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "W/Tax Code"
+        },
+        "WithholdingTaxAgent": {
+          "type": "cds.Boolean",
+          "@sap.label": "WTax Agent"
+        },
+        "ObligationDateBegin": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "W/Tax Obligated Frm"
+        },
+        "ObligationDateEnd": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Oblig.to W/Tax Until"
+        },
+        "WithholdingTaxNumber": {
+          "type": "cds.String",
+          "length": 16,
+          "@sap.label": "W/tax number"
+        },
+        "WithholdingTaxCertificate": {
+          "type": "cds.String",
+          "length": 25,
+          "@sap.label": "Exemption Number"
+        },
+        "WithholdingTaxExmptPercent": {
+          "type": "cds.Decimal",
+          "precision": 5,
+          "scale": 2,
+          "@sap.label": "Exemption Rate"
+        },
+        "ExemptionDateBegin": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Exemption Start Date"
+        },
+        "ExemptionDateEnd": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Exemption End Date"
+        },
+        "ExemptionReason": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Exemption Reason"
+        },
+        "AuthorizationGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Authorization"
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_CustSalesPartnerFunc": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "@sap.label": "Customer Sales Area Partner Function",
+      "elements": {
+        "Customer": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Customer"
+        },
+        "SalesOrganization": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Sales Organization"
+        },
+        "DistributionChannel": {
+          "key": true,
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Distribution Channel"
+        },
+        "Division": {
+          "key": true,
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Division"
+        },
+        "PartnerCounter": {
+          "key": true,
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Partner counter"
+        },
+        "PartnerFunction": {
+          "key": true,
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Partner Function"
+        },
+        "BPCustomerNumber": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Customer"
+        },
+        "CustomerPartnerDescription": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.label": "Partner description"
+        },
+        "DefaultPartner": {
+          "type": "cds.Boolean",
+          "@sap.label": "Default Partner"
+        },
+        "AuthorizationGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Authorization"
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_Supplier": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.creatable": "false",
+      "@sap.deletable": "false",
+      "@sap.content.version": "1",
+      "@sap.label": "Supplier",
+      "elements": {
+        "Supplier": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Vendor"
+        },
+        "AlternativePayeeAccountNumber": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Alternative Payee"
+        },
+        "AuthorizationGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Authorization"
+        },
+        "CreatedByUser": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.label": "Created by",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "CreationDate": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Created on",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "Customer": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Customer"
+        },
+        "PaymentIsBlockedForSupplier": {
+          "type": "cds.Boolean",
+          "@sap.label": "Payment block"
+        },
+        "PostingIsBlocked": {
+          "type": "cds.Boolean",
+          "@sap.label": "Posting Block"
+        },
+        "PurchasingIsBlocked": {
+          "type": "cds.Boolean",
+          "@sap.label": "Purch. block"
+        },
+        "SupplierAccountGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Account group"
+        },
+        "SupplierFullName": {
+          "type": "cds.String",
+          "length": 220,
+          "@sap.label": "Supplier Name",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "SupplierName": {
+          "type": "cds.String",
+          "length": 80,
+          "@sap.label": "Name of Supplier",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "VATRegistration": {
+          "type": "cds.String",
+          "length": 20,
+          "@sap.label": "VAT Registration No."
+        },
+        "BirthDate": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Date of Birth"
+        },
+        "ConcatenatedInternationalLocNo": {
+          "type": "cds.String",
+          "length": 20,
+          "@sap.label": "Int. Location No.",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "DeletionIndicator": {
+          "type": "cds.Boolean",
+          "@sap.label": "Deletion flag"
+        },
+        "FiscalAddress": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Fiscal address"
+        },
+        "Industry": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Industry",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "InternationalLocationNumber1": {
+          "type": "cds.String",
+          "length": 7,
+          "@sap.label": "Int. location no. 1"
+        },
+        "InternationalLocationNumber2": {
+          "type": "cds.String",
+          "length": 5,
+          "@sap.label": "Int. location no. 2"
+        },
+        "InternationalLocationNumber3": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.label": "Check digit"
+        },
+        "IsNaturalPerson": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.label": "Natural Person"
+        },
+        "ResponsibleType": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Tax type"
+        },
+        "SuplrQltyInProcmtCertfnValidTo": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "QM System Valid To"
+        },
+        "SuplrQualityManagementSystem": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Actual QM System"
+        },
+        "SupplierCorporateGroup": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Group key"
+        },
+        "SupplierProcurementBlock": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Block Function"
+        },
+        "TaxNumber1": {
+          "type": "cds.String",
+          "length": 16,
+          "@sap.label": "Tax Number 1",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "TaxNumber2": {
+          "type": "cds.String",
+          "length": 11,
+          "@sap.label": "Tax Number 2",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "TaxNumber3": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.label": "Tax Number 3",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "TaxNumber4": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.label": "Tax Number 4",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "TaxNumber5": {
+          "type": "cds.String",
+          "length": 60,
+          "@sap.label": "Tax Number 5",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "TaxNumberResponsible": {
+          "type": "cds.String",
+          "length": 18,
+          "@sap.label": "Tax Number"
+        },
+        "TaxNumberType": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Tax number type"
+        },
+        "to_SupplierPurchasingOrg": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_SupplierPurchasingOrg",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "to_SupplierCompany": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_SupplierCompany",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_SupplierCompany": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.deletable": "false",
+      "@sap.content.version": "1",
+      "@sap.label": "Supplier Company",
+      "elements": {
+        "Supplier": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Vendor"
+        },
+        "CompanyCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Company Code"
+        },
+        "AuthorizationGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Authorization"
+        },
+        "CompanyCodeName": {
+          "type": "cds.String",
+          "length": 25,
+          "@sap.label": "Company Name",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "PaymentBlockingReason": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.label": "Payment Block"
+        },
+        "SupplierIsBlockedForPosting": {
+          "type": "cds.Boolean",
+          "@sap.label": "Co.code post.block"
+        },
+        "AccountingClerk": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Clerk Abbrev."
+        },
+        "AccountingClerkFaxNumber": {
+          "type": "cds.String",
+          "length": 31,
+          "@sap.label": "Acctg clerk's fax"
+        },
+        "AccountingClerkPhoneNumber": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.label": "Acct.clerks tel.no."
+        },
+        "SupplierClerk": {
+          "type": "cds.String",
+          "length": 15,
+          "@sap.label": "Clerk at vendor"
+        },
+        "SupplierClerkURL": {
+          "type": "cds.String",
+          "length": 130,
+          "@sap.label": "Clrk's internet add."
+        },
+        "PaymentMethodsList": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Payment Methods"
+        },
+        "PaymentTerms": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Payment terms"
+        },
+        "ClearCustomerSupplier": {
+          "type": "cds.Boolean",
+          "@sap.label": "Clearing with cust."
+        },
+        "IsToBeLocallyProcessed": {
+          "type": "cds.Boolean",
+          "@sap.label": "Local Processing"
+        },
+        "ItemIsToBePaidSeparately": {
+          "type": "cds.Boolean",
+          "@sap.label": "Individual Payment"
+        },
+        "PaymentIsToBeSentByEDI": {
+          "type": "cds.Boolean",
+          "@sap.label": "Pmnt advice by EDI"
+        },
+        "HouseBank": {
+          "type": "cds.String",
+          "length": 5,
+          "@sap.label": "House bank"
+        },
+        "CheckPaidDurationInDays": {
+          "type": "cds.Decimal",
+          "precision": 3,
+          "scale": 0,
+          "@sap.label": "Check Cashing Time"
+        },
+        "BillOfExchLmtAmtInCoCodeCrcy": {
+          "type": "cds.Decimal",
+          "precision": 14,
+          "scale": 3,
+          "@sap.label": "Bill/Ex. Limit"
+        },
+        "SupplierClerkIDBySupplier": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.label": "Account with vendor"
+        },
+        "ReconciliationAccount": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Reconciliation acct"
+        },
+        "InterestCalculationCode": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Interest indicator"
+        },
+        "InterestCalculationDate": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Last Key Date"
+        },
+        "IntrstCalcFrequencyInMonths": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Int.Calc.Freq."
+        },
+        "SupplierHeadOffice": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Head office"
+        },
+        "AlternativePayee": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Alternative payee"
+        },
+        "LayoutSortingRule": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Sort key"
+        },
+        "APARToleranceGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Tolerance Group"
+        },
+        "SupplierCertificationDate": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Certification Date"
+        },
+        "SupplierAccountNote": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.label": "Account Memo"
+        },
+        "WithholdingTaxCountry": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "WTax Country"
+        },
+        "DeletionIndicator": {
+          "type": "cds.Boolean",
+          "@sap.label": "Co.cde deletion flag"
+        },
+        "CashPlanningGroup": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Planning Group"
+        },
+        "IsToBeCheckedForDuplicates": {
+          "type": "cds.Boolean",
+          "@sap.label": "Check Double Invoice"
+        },
+        "SupplierAccountGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Account group"
+        },
+        "to_SupplierWithHoldingTax": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_SupplierWithHoldingTax",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        },
+        "to_SupplierDunning": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_SupplierDunning",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_SupplierDunning": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "@sap.label": "Supplier Company Dunning",
+      "elements": {
+        "Supplier": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Vendor"
+        },
+        "CompanyCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Company Code"
+        },
+        "DunningArea": {
+          "key": true,
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Dunning Area"
+        },
+        "DunningBlock": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.label": "Dunning Block"
+        },
+        "DunningLevel": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.label": "Dunning Level"
+        },
+        "DunningProcedure": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Dunning Procedure"
+        },
+        "DunningRecipient": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Dunn.recipient"
+        },
+        "LastDunnedOn": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Last Dunned"
+        },
+        "LegDunningProcedureOn": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Legal Dunn.Proc.From"
+        },
+        "DunningClerk": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Dunning Clerk"
+        },
+        "AuthorizationGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Authorization"
+        },
+        "SupplierAccountGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Account group"
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_SupplierPartnerFunc": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "@sap.label": "Supplier Purchasing Partner Function",
+      "elements": {
+        "Supplier": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Vendor"
+        },
+        "PurchasingOrganization": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Purch. organization"
+        },
+        "SupplierSubrange": {
+          "key": true,
+          "type": "cds.String",
+          "length": 6,
+          "@sap.label": "Supplier Subrange"
+        },
+        "Plant": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Plant"
+        },
+        "PartnerFunction": {
+          "key": true,
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Partner Function"
+        },
+        "PartnerCounter": {
+          "key": true,
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Partner counter"
+        },
+        "DefaultPartner": {
+          "type": "cds.Boolean",
+          "@sap.label": "Default Partner"
+        },
+        "CreationDate": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Created on",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "CreatedByUser": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.label": "Created by",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false"
+        },
+        "ReferenceSupplier": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Ref. to vendor"
+        },
+        "AuthorizationGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Authorization"
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_SupplierPurchasingOrg": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.deletable": "false",
+      "@sap.content.version": "1",
+      "@sap.label": "Supplier Purchasing Organization",
+      "elements": {
+        "Supplier": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Vendor"
+        },
+        "PurchasingOrganization": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Purch. organization"
+        },
+        "CalculationSchemaGroupCode": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Schema Grp, Supplier"
+        },
+        "DeletionIndicator": {
+          "type": "cds.Boolean",
+          "@sap.label": "Del. flag POrg."
+        },
+        "IncotermsClassification": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Incoterms"
+        },
+        "IncotermsTransferLocation": {
+          "type": "cds.String",
+          "length": 28,
+          "@sap.label": "Incoterms (Part 2)"
+        },
+        "IncotermsVersion": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Incoterms Version"
+        },
+        "IncotermsLocation1": {
+          "type": "cds.String",
+          "length": 70,
+          "@sap.label": "Incoterms Location 1"
+        },
+        "IncotermsLocation2": {
+          "type": "cds.String",
+          "length": 70,
+          "@sap.label": "Incoterms Location 2"
+        },
+        "InvoiceIsGoodsReceiptBased": {
+          "type": "cds.Boolean",
+          "@sap.label": "GR-Based Inv. Verif."
+        },
+        "MaterialPlannedDeliveryDurn": {
+          "type": "cds.Decimal",
+          "precision": 3,
+          "scale": 0,
+          "@sap.label": "Planned Deliv. Time"
+        },
+        "MinimumOrderAmount": {
+          "type": "cds.Decimal",
+          "precision": 14,
+          "scale": 3,
+          "@sap.label": "Minimum order value"
+        },
+        "PaymentTerms": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Payment terms"
+        },
+        "PricingDateControl": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.label": "Pricing Date Control"
+        },
+        "PurOrdAutoGenerationIsAllowed": {
+          "type": "cds.Boolean",
+          "@sap.label": "Automatic PO"
+        },
+        "PurchaseOrderCurrency": {
+          "type": "cds.String",
+          "length": 5,
+          "@sap.label": "Order currency",
+          "@sap.semantics": "currency-code"
+        },
+        "PurchasingGroup": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Purchasing Group"
+        },
+        "PurchasingIsBlockedForSupplier": {
+          "type": "cds.Boolean",
+          "@sap.label": "Pur. block POrg"
+        },
+        "ShippingCondition": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Shipping Conditions"
+        },
+        "SupplierABCClassificationCode": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.label": "ABC indicator"
+        },
+        "SupplierPhoneNumber": {
+          "type": "cds.String",
+          "length": 16,
+          "@sap.label": "Telephone"
+        },
+        "SupplierRespSalesPersonName": {
+          "type": "cds.String",
+          "length": 30,
+          "@sap.label": "Salesperson"
+        },
+        "AuthorizationGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Authorization"
+        },
+        "SupplierAccountGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Account group"
+        },
+        "to_PartnerFunction": {
+          "@cds.ambiguous": "missing on condition?",
+          "type": "cds.Association",
+          "target": "API_BUSINESS_PARTNER.A_SupplierPartnerFunc",
+          "cardinality": {
+            "max": "*"
+          },
+          "keys": []
+        }
+      }
+    },
+    "API_BUSINESS_PARTNER.A_SupplierWithHoldingTax": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "@sap.label": "Supplier Company WithHolding Tax",
+      "elements": {
+        "Supplier": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "Vendor"
+        },
+        "CompanyCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Company Code"
+        },
+        "WithholdingTaxType": {
+          "key": true,
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Withholding Tax Type"
+        },
+        "ExemptionDateBegin": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Exemption Start Date"
+        },
+        "ExemptionDateEnd": {
+          "type": "cds.DateTime",
+          "@odata.Type": "Edm.DateTime",
+          "@odata.Precision": 0,
+          "@sap.label": "Exemption End Date"
+        },
+        "ExemptionReason": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Exemption Reason"
+        },
+        "IsWithholdingTaxSubject": {
+          "type": "cds.Boolean",
+          "@sap.label": "Subject to w/tx"
+        },
+        "RecipientType": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Recipient Type"
+        },
+        "WithholdingTaxCertificate": {
+          "type": "cds.String",
+          "length": 25,
+          "@sap.label": "Exemption Number"
+        },
+        "WithholdingTaxCode": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "W/Tax Code"
+        },
+        "WithholdingTaxExmptPercent": {
+          "type": "cds.Decimal",
+          "precision": 5,
+          "scale": 2,
+          "@sap.label": "Exemption Rate"
+        },
+        "WithholdingTaxNumber": {
+          "type": "cds.String",
+          "length": 16,
+          "@sap.label": "W/tax number"
+        },
+        "AuthorizationGroup": {
+          "type": "cds.String",
+          "length": 4,
+          "@sap.label": "Authorization"
+        }
+      }
+    }
+  }
+}
